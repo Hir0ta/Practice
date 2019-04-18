@@ -1,0 +1,30 @@
+<div class="container">
+	<button (click)="gombnyomas()">Nyomd meg</button><br>
+	<div id="iframe">
+		<table border=1 *ngIf="valtozo" class="printContent">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>TEXT</th>
+					<th>PASSWORD</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor='let item of results'>
+					<td><div class="tdHeight">{{item.id}}</div></td>
+					<td><div class="tdHeight">{{item.text}}</div></td>
+					<td><div class="tdHeight">{{item.password}}</div></td>
+					<td class="buttons"><button (click)="modosit(item)">Módosít</button></td>
+					<td class="buttons"><button (click)="torles(item)">Törlés</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="nonPrint">
+		<input type="text" placeholder="text" [(ngModel)]="inputText"><br>
+		<input type="password" placeholder="password" [(ngModel)]="inputPassword"><br>
+		<input type="checkbox" [(ngModel)]="check"><p style="display: inline-block">Kötelező kipipálni</p><br>
+		<button (click)="kuld()">Küld</button>
+		<button (click)="printIt()">Nyomtass</button>
+	</div>
+</div>

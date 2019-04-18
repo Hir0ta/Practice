@@ -1,0 +1,12 @@
+<div>
+	a: <input type="number" step="0.01" [(ngModel)]='a'><br><br>
+	b: <input type="number" step="0.01" [(ngModel)]='b'><br><br>
+	c: <input type="number" step="0.01" [(ngModel)]='c'>
+</div>
+<br>
+<button (click)='szamolj()'>Számolj</button>
+<div>
+	<p *ngIf = "d < 0">Nincs megoldás</p>
+	<p *ngIf = "d == 0">1 megoldás: {{solve1}}</p>
+	<p *ngIf = "d > 0">2 megoldás: {{solve1}}, {{solve2}}</p>
+</div>

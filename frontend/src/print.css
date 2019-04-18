@@ -1,0 +1,87 @@
+@media print 
+{
+	body{
+		padding-top: 20px;
+	}
+
+	#iframe {
+		width: 100vw;
+		height: 100vw;
+		border: 1px solid black;
+		position: absolute;
+		top: 0px;
+		left: 0;
+	}
+
+	button, .nonPrint
+	{
+		display: none;
+	}
+
+	header
+	{
+		display: flex !important;
+		justify-content: center;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 2vh;
+		background-color: lightgray;
+		page-break-after: always;
+	}
+	
+	footer
+	{
+		display: flex !important;
+		justify-content: center;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100vw;
+		height: 2vh;
+		background-color: lightgray;
+	}
+
+	.printContent
+	{
+		table-layout: fixed;
+		width: 98vw;
+		border-collapse: collapse;
+		border-color: black;
+		margin-top: 50px;
+	}
+
+	.printContent td, .printContent th {
+		min-width: 10px;
+	}
+
+	.printContent thead
+	{
+		display: table-header-group;
+		margin-top: 10px;
+	}
+
+	.printContent tr td:nth-child(4), .printContent tr td:nth-child(5)
+	{
+		display: none;
+	}
+
+	tr:nth-child(2n+1) {
+		height: 100px;
+		width: 100%;
+	}
+
+	tr:nth-child(2n){
+		height: 200px !important;
+		width: 100%;
+	}
+
+}
+
+@media print and (orientation: landscape)
+{
+	.printContent{
+		display: none;
+	}
+}

@@ -1,0 +1,93 @@
+<div id="popupOuter">
+	<div id="popup" class="newWorker-popup"> 
+		<div id="popupHeader">
+			<div id="popupTitle"><h2>Dolgozó hozzáadása</h2></div>
+		</div>
+		<div id="popupBody">
+			<div id="workerData">
+				<h3>Dolgozó adatai</h3>
+				<hr class="hr-grey">
+				<div class="popup-dataForm">
+					<table>
+						<tbody>
+							<tr>
+								<td class="readOnly">Titulus*:</td>
+								<td class="inputTd"><input type="text" [(ngModel)]="Title"></td>
+							</tr>
+							<tr>
+								<td class="readOnly">Családnév*:</td>
+								<td class="inputTd"><input type="text" [(ngModel)]="laststName"></td>
+							</tr>
+							<tr>
+								<td class="readOnly">Keresztnév:</td>
+								<td class="inputTd"><input type="text" [(ngModel)]="firstName"></td>
+							</tr>
+							<tr>
+								<td class="readOnly">Második Keresztnév:</td>
+								<td class="inputTd"><input type="text" [(ngModel)]="firstName2"></td>
+							</tr>
+							<tr>
+								<td class="readOnly">Születési Dátum:</td>
+								<td class="inputTd"><input type="text" [(ngModel)]="birthday"></td>
+							</tr>
+							<tr>
+								<td class="readOnly">Születési hely:</td>
+								<td class="inputTd"><input type="text" [(ngModel)]="birthplace"></td>
+							</tr>
+							<tr>
+								<td class="readOnly">Államporgárság:</td>
+								<td class="inputTd"><input type="text" [(ngModel)]="nationality"></td>
+							</tr>
+							<tr>
+								<td class="readOnly">Anyja neve:</td>
+								<td class="inputTd"><input type="text" [(ngModel)]="mothersName"></td>
+							</tr>
+							<tr>
+								<td class="readOnly">Neme:</td>
+								<td class="inputTd">
+									<div id="dropdown">
+										<div id="dropdownTitle">{{sex}}</div>
+										<div id="options">
+											<span (click)="setSex(male)">Férfi</span>
+											<span (click)="setSex(female)">Nő</span>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<h3>Jogviszony adatai</h3>
+					<hr class="hr-grey">
+					<table>
+						<tbody>
+							<tr>
+								<td class="readOnly">Jogviszony kezdete:</td>
+								<td class="inputTd"><input type="text" [(ngModel)]="startingDate"></td>
+							</tr>
+							<tr>
+								<td class="readOnly">Jogviszony vége:</td>
+								<td class="inputTd"><input type="text" [(ngModel)]="endDate"></td>
+							</tr>
+							<tr>
+								<td class="readOnly">Szerződés szerinti napi munkaidő:</td>
+								<td class="inputTd"><input type="text" [(ngModel)]="workinTime"></td>
+							</tr>
+							<tr>
+								<td class="readOnly">Éves szabadságkeret:</td>
+								<td class="inputTd"><input type="text" [(ngModel)]="yearlyFreedom"></td>
+							</tr>
+							<tr>
+								<td class="readOnly">Éves betegszabadság keret:</td>
+								<td class="inputTd"><input type="text" [(ngModel)]="yearlySickness"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div id="popupFooter">
+			<button id="saveButton">Mentés</button>
+			<button id="cancelButton">Mégse</button>
+		</div>
+	</div>
+</div>
